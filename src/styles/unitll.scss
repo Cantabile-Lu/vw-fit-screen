@@ -1,0 +1,21 @@
+@use "sass:math";
+$designWidth: 1920;
+$designHeight: 1080;
+
+@function vw($px) {
+  @return math.div($px, $designWidth) * 100vw;
+}
+@function vh($px) {
+  @return math.div($px, $designHeight) * 100vh;
+}
+
+/**
+   如果设置全局变量则更方便了, 无需引入.详细配置参考vue-cli官网
+ */
+// css: {
+//   loaderOptions: {
+//     sass: {
+//       prependData: `@import "~@/styles/utils.scss";`
+//     }
+//   }
+// },
